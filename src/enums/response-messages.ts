@@ -1,0 +1,3 @@
+export enum RESPONSE_MESSAGES {
+  SUCCESS = "SUCCESS",
+}
