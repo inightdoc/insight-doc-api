@@ -12,7 +12,7 @@ export const sessionOptions: session.SessionOptions = {
   cookie: {
     secure: config.nodeEnv === "production",
     httpOnly: true,
-    sameSite: "lax",
+    sameSite: config.nodeEnv === "production" ? "none" : "lax",
     maxAge: 1000 * 60 * 60,
   }, // 1 hour
 };
