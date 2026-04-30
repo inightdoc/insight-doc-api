@@ -63,7 +63,7 @@ class GoogleGenAiService {
   async generateStream(
     userQuery: string,
     searchResults: string,
-    chatHistory: ChatHistory[]
+    chatHistory: ChatHistory[],
   ) {
     const safetySettings = [
       {

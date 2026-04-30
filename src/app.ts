@@ -30,6 +30,7 @@ const makeUploadsDirectory = async () => {
 
 const app = express();
 redisClient.connect();
+app.set("trust proxy", 1);
 const allowedOrigins = [config.corsOrigin];
 app.use(
   cors({

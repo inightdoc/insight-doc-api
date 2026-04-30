@@ -13,6 +13,8 @@ export const getCollection = async (collectionName: string) => {
     name: collectionName,
     embeddingFunction: new GoogleGeminiEmbeddingFunction({
       apiKey: config.geminiApiKey,
+      modelName: "gemini-embedding-001",
+      dimension: 768,
     }),
   });
   return collection;
